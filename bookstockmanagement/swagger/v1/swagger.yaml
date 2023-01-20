@@ -1,0 +1,127 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/book":
+    get:
+      summary: list books
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create book
+      responses:
+        '200':
+          description: successful
+  "/book/new":
+    get:
+      summary: new book
+      responses:
+        '200':
+          description: successful
+  "/book/{id}/edit":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: edit book
+      responses:
+        '200':
+          description: successful
+  "/book/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show book
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update book
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update book
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete book
+      responses:
+        '200':
+          description: successful
+  "/searchauthor":
+    get:
+      summary: list searchauthors
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create searchauthor
+      responses:
+        '200':
+          description: successful
+  "/searchauthor/new":
+    get:
+      summary: new searchauthor
+      responses:
+        '200':
+          description: successful
+  "/searchauthor/{id}/edit":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: edit searchauthor
+      responses:
+        '200':
+          description: successful
+  "/searchauthor/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show searchauthor
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update searchauthor
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update searchauthor
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete searchauthor
+      responses:
+        '200':
+          description: successful
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com

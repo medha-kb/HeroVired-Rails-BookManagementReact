@@ -1,0 +1,2 @@
+module SearchnameHelper
+end
